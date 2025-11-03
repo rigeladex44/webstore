@@ -710,7 +710,7 @@ function moveSlide(n) {
 }
 
 // Show Specific Slide
-function currentSlide(n) {
+function goToSlide(n) {
     clearInterval(slideInterval);
     currentSlide = n;
     showSlide(currentSlide);
