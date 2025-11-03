@@ -13,13 +13,16 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <i class="fas fa-ticket-alt"></i>
+                    <i class="fas fa-gamepad"></i>
                     <span>VoucherKu</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Cari produk...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">Beranda</a></li>
                     <li><a href="#products">Produk</a></li>
-                    <li><a href="#howto">Cara Belanja</a></li>
                     <li><a href="#contact">Kontak</a></li>
                 </ul>
                 <div class="cart-icon">
@@ -30,38 +33,64 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Voucher Digital & Akun Premium</h1>
-                <p>Beli voucher game, streaming, dan akun premium dengan mudah dan aman</p>
-                <a href="#products" class="btn btn-primary">Belanja Sekarang</a>
+    <!-- Banner Slider -->
+    <section id="home" class="banner-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1>🎮 Voucher Gaming Terlengkap</h1>
+                    <p>Mobile Legends, Free Fire, PUBG Mobile & Lebih Banyak Lagi!</p>
+                    <a href="#products" class="btn btn-primary">Belanja Sekarang</a>
+                </div>
             </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>📺 Akun Premium Streaming</h1>
+                    <p>Netflix, Disney+, YouTube Premium - Harga Terjangkau!</p>
+                    <a href="#products" class="btn btn-primary">Lihat Produk</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>🎵 Langganan Musik Premium</h1>
+                    <p>Spotify, Apple Music, Joox - Nikmati Musik Tanpa Batas!</p>
+                    <a href="#products" class="btn btn-primary">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </section>
 
-    <!-- Categories -->
-    <section class="categories">
+    <!-- Quick Categories -->
+    <section class="quick-categories">
         <div class="container">
-            <h2 class="section-title">Kategori Produk</h2>
-            <div class="category-grid">
-                <div class="category-card" data-category="gaming">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">
+                    <i class="fas fa-th"></i>
+                    <span>Semua Produk</span>
+                </button>
+                <button class="category-tab" data-category="gaming">
                     <i class="fas fa-gamepad"></i>
-                    <h3>Gaming</h3>
-                </div>
-                <div class="category-card" data-category="streaming">
+                    <span>Gaming</span>
+                </button>
+                <button class="category-tab" data-category="streaming">
                     <i class="fas fa-tv"></i>
-                    <h3>Streaming</h3>
-                </div>
-                <div class="category-card" data-category="music">
+                    <span>Streaming</span>
+                </button>
+                <button class="category-tab" data-category="music">
                     <i class="fas fa-music"></i>
-                    <h3>Musik</h3>
-                </div>
-                <div class="category-card" data-category="software">
+                    <span>Musik</span>
+                </button>
+                <button class="category-tab" data-category="software">
                     <i class="fas fa-laptop-code"></i>
-                    <h3>Software</h3>
-                </div>
+                    <span>Software</span>
+                </button>
             </div>
         </div>
     </section>
@@ -69,13 +98,11 @@
     <!-- Products -->
     <section id="products" class="products">
         <div class="container">
-            <h2 class="section-title">Produk Kami</h2>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Semua</button>
-                <button class="filter-btn" data-filter="gaming">Gaming</button>
-                <button class="filter-btn" data-filter="streaming">Streaming</button>
-                <button class="filter-btn" data-filter="music">Musik</button>
-                <button class="filter-btn" data-filter="software">Software</button>
+            <div class="section-header">
+                <h2 class="section-title">Produk Terlaris</h2>
+                <div class="product-count">
+                    <span id="productCount">0</span> Produk
+                </div>
             </div>
             <div class="product-grid" id="productGrid">
                 <!-- Products will be loaded dynamically -->
@@ -83,34 +110,29 @@
         </div>
     </section>
 
-    <!-- How To -->
-    <section id="howto" class="howto">
+    <!-- Features -->
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">Cara Belanja</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <i class="fas fa-search"></i>
-                    <h3>Pilih Produk</h3>
-                    <p>Cari dan pilih voucher atau akun premium yang Anda inginkan</p>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Proses Cepat</h3>
+                    <p>Kode dikirim otomatis</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <i class="fas fa-shopping-cart"></i>
-                    <h3>Tambah ke Keranjang</h3>
-                    <p>Klik tombol beli dan produk akan masuk ke keranjang</p>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>100% Aman</h3>
+                    <p>Transaksi terpercaya</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <i class="fas fa-credit-card"></i>
-                    <h3>Lakukan Pembayaran</h3>
-                    <p>Pilih metode pembayaran dan selesaikan transaksi</p>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>CS 24/7</h3>
+                    <p>Siap membantu Anda</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <i class="fas fa-envelope"></i>
-                    <h3>Terima Kode</h3>
-                    <p>Kode voucher atau detail akun dikirim ke email Anda</p>
+                <div class="feature-item">
+                    <i class="fas fa-tag"></i>
+                    <h3>Harga Terbaik</h3>
+                    <p>Harga kompetitif</p>
                 </div>
             </div>
         </div>
