@@ -311,10 +311,10 @@ function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card';
     card.dataset.category = product.category;
-    
+
     card.innerHTML = `
         <div class="product-image">
-            <span style="font-size: 4rem;">${product.icon}</span>
+            ${product.icon}
         </div>
         <div class="product-info">
             <span class="product-category">${getCategoryName(product.category)}</span>
@@ -328,7 +328,7 @@ function createProductCard(product) {
             </div>
         </div>
     `;
-    
+
     return card;
 }
 
