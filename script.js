@@ -90,6 +90,92 @@ let cart = [];
 let currentSlide = 1;
 let slideInterval;
 
+// Product Image Data
+function getProductImageData(subcategory) {
+    const imageData = {
+        // Gaming
+        "Mobile Legends": {
+            image: "https://i.imgur.com/6oMKwVq.png",
+            bgGradient: "linear-gradient(135deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
+            iconClass: "fas fa-crown"
+        },
+        "Free Fire": {
+            image: "https://i.imgur.com/7rGPkVF.png",
+            bgGradient: "linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%)",
+            iconClass: "fas fa-fire"
+        },
+        "PUBG Mobile": {
+            image: "https://i.imgur.com/xB8QJKZ.png",
+            bgGradient: "linear-gradient(135deg, #FFA500 0%, #FF6347 50%, #FF4500 100%)",
+            iconClass: "fas fa-crosshairs"
+        },
+        "Roblox": {
+            image: "https://i.imgur.com/mFALKzs.png",
+            bgGradient: "linear-gradient(135deg, #E94057 0%, #8A2387 50%, #F27121 100%)",
+            iconClass: "fas fa-cube"
+        },
+        "Genshin Impact": {
+            image: "https://i.imgur.com/V7rGhZR.png",
+            bgGradient: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)",
+            iconClass: "fas fa-gem"
+        },
+        "Valorant": {
+            image: "https://i.imgur.com/pMDfGcL.png",
+            bgGradient: "linear-gradient(135deg, #FF0844 0%, #FFB199 100%)",
+            iconClass: "fas fa-bullseye"
+        },
+        // Streaming
+        "Netflix": {
+            image: "https://logo.clearbit.com/netflix.com",
+            bgGradient: "linear-gradient(135deg, #E50914 0%, #8E0000 100%)",
+            iconClass: "fas fa-film"
+        },
+        "Disney+": {
+            image: "https://logo.clearbit.com/disneyplus.com",
+            bgGradient: "linear-gradient(135deg, #113CCF 0%, #042D86 100%)",
+            iconClass: "fas fa-star"
+        },
+        "YouTube": {
+            image: "https://logo.clearbit.com/youtube.com",
+            bgGradient: "linear-gradient(135deg, #FF0000 0%, #8B0000 100%)",
+            iconClass: "fab fa-youtube"
+        },
+        // Music
+        "Spotify": {
+            image: "https://logo.clearbit.com/spotify.com",
+            bgGradient: "linear-gradient(135deg, #1DB954 0%, #1AA34A 50%, #1ED760 100%)",
+            iconClass: "fab fa-spotify"
+        },
+        "Apple Music": {
+            image: "https://logo.clearbit.com/apple.com",
+            bgGradient: "linear-gradient(135deg, #FA233B 0%, #FB5C74 50%, #FE9496 100%)",
+            iconClass: "fab fa-apple"
+        },
+        // Software
+        "Microsoft 365": {
+            image: "https://logo.clearbit.com/microsoft.com",
+            bgGradient: "linear-gradient(135deg, #0078D4 0%, #005A9E 50%, #00BCF2 100%)",
+            iconClass: "fab fa-microsoft"
+        },
+        "Adobe": {
+            image: "https://logo.clearbit.com/adobe.com",
+            bgGradient: "linear-gradient(135deg, #FF0000 0%, #ED1C24 50%, #FA0F00 100%)",
+            iconClass: "fas fa-bezier-curve"
+        },
+        "Canva": {
+            image: "https://logo.clearbit.com/canva.com",
+            bgGradient: "linear-gradient(135deg, #00C4CC 0%, #7C2AE8 50%, #FF66C4 100%)",
+            iconClass: "fas fa-paint-brush"
+        }
+    };
+
+    return imageData[subcategory] || {
+        image: null,
+        bgGradient: "linear-gradient(135deg, #FFD700 0%, #FFA500 100%)",
+        iconClass: "fas fa-star"
+    };
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     loadProducts();
@@ -189,9 +275,19 @@ function createProductCard(product) {
     card.dataset.category = product.category;
     card.dataset.subcategory = product.subcategory || '';
 
+    const imageData = getProductImageData(product.subcategory);
+
     card.innerHTML = `
-        <div class="product-image">
-            ${product.icon}
+        <div class="product-image" style="background: ${imageData.bgGradient}">
+            ${imageData.image
+                ? `<img src="${imageData.image}" alt="${product.subcategory}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                   <div class="image-fallback" style="display:none;">
+                       <i class="${imageData.iconClass}"></i>
+                   </div>`
+                : `<div class="image-fallback" style="display:flex;">
+                       <i class="${imageData.iconClass}"></i>
+                   </div>`
+            }
         </div>
         <div class="product-info">
             <span class="product-subcategory">${product.subcategory || getCategoryName(product.category)}</span>
