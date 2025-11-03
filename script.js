@@ -1,6 +1,6 @@
 // Products Database
 const products = [
-    // Gaming
+    // ===== GAMING (10 Products) =====
     {
         id: 1,
         name: "Mobile Legends 86 Diamond",
@@ -11,6 +11,14 @@ const products = [
     },
     {
         id: 2,
+        name: "Mobile Legends 172 Diamond",
+        category: "gaming",
+        price: 38000,
+        description: "Top up 172 diamond untuk Mobile Legends",
+        icon: "🎮"
+    },
+    {
+        id: 3,
         name: "Free Fire 100 Diamond",
         category: "gaming",
         price: 15000,
@@ -18,7 +26,15 @@ const products = [
         icon: "🔥"
     },
     {
-        id: 3,
+        id: 4,
+        name: "Free Fire 310 Diamond",
+        category: "gaming",
+        price: 45000,
+        description: "Top up 310 diamond untuk Free Fire",
+        icon: "🔥"
+    },
+    {
+        id: 5,
         name: "PUBG Mobile 325 UC",
         category: "gaming",
         price: 50000,
@@ -26,24 +42,49 @@ const products = [
         icon: "🎯"
     },
     {
-        id: 4,
+        id: 6,
         name: "Genshin Impact Blessing",
         category: "gaming",
         price: 65000,
-        description: "Blessing of the Welkin Moon",
+        description: "Blessing of the Welkin Moon - 30 hari",
         icon: "⚔️"
     },
     {
-        id: 5,
+        id: 7,
         name: "Steam Wallet 60K",
         category: "gaming",
         price: 60000,
         description: "Voucher Steam Wallet IDR 60.000",
         icon: "💨"
     },
-    // Streaming
     {
-        id: 6,
+        id: 8,
+        name: "Valorant 1000 VP",
+        category: "gaming",
+        price: 95000,
+        description: "Valorant Points 1000 VP untuk skin & battle pass",
+        icon: "🎯"
+    },
+    {
+        id: 9,
+        name: "Roblox 800 Robux",
+        category: "gaming",
+        price: 85000,
+        description: "Top up 800 Robux untuk Roblox",
+        icon: "🎲"
+    },
+    {
+        id: 10,
+        name: "Garena Shells 1000",
+        category: "gaming",
+        price: 125000,
+        description: "Garena Shells untuk berbagai game Garena",
+        icon: "🐚"
+    },
+
+    // ===== STREAMING (8 Products) =====
+    {
+        id: 11,
         name: "Netflix Premium 1 Bulan",
         category: "streaming",
         price: 54000,
@@ -51,7 +92,15 @@ const products = [
         icon: "🎬"
     },
     {
-        id: 7,
+        id: 12,
+        name: "Netflix Premium 3 Bulan",
+        category: "streaming",
+        price: 155000,
+        description: "Akses Netflix Premium 3 bulan - 4K UHD",
+        icon: "🎬"
+    },
+    {
+        id: 13,
         name: "Disney+ Hotstar 1 Bulan",
         category: "streaming",
         price: 39000,
@@ -59,7 +108,7 @@ const products = [
         icon: "🏰"
     },
     {
-        id: 8,
+        id: 14,
         name: "YouTube Premium 1 Bulan",
         category: "streaming",
         price: 35000,
@@ -67,16 +116,41 @@ const products = [
         icon: "📺"
     },
     {
-        id: 9,
+        id: 15,
         name: "Vidio Premier League",
         category: "streaming",
         price: 45000,
         description: "Nonton Premier League 1 bulan",
         icon: "⚽"
     },
-    // Music
     {
-        id: 10,
+        id: 16,
+        name: "WeTV VIP 1 Bulan",
+        category: "streaming",
+        price: 35000,
+        description: "WeTV VIP untuk drama Asia premium",
+        icon: "📱"
+    },
+    {
+        id: 17,
+        name: "Amazon Prime Video",
+        category: "streaming",
+        price: 59000,
+        description: "Amazon Prime Video 1 bulan",
+        icon: "📦"
+    },
+    {
+        id: 18,
+        name: "HBO GO Premium",
+        category: "streaming",
+        price: 79000,
+        description: "HBO GO Premium 1 bulan - Original Series",
+        icon: "🎭"
+    },
+
+    // ===== MUSIC (7 Products) =====
+    {
+        id: 19,
         name: "Spotify Premium 1 Bulan",
         category: "music",
         price: 27000,
@@ -84,7 +158,7 @@ const products = [
         icon: "🎵"
     },
     {
-        id: 11,
+        id: 20,
         name: "Spotify Premium 3 Bulan",
         category: "music",
         price: 75000,
@@ -92,7 +166,7 @@ const products = [
         icon: "🎶"
     },
     {
-        id: 12,
+        id: 21,
         name: "Apple Music 1 Bulan",
         category: "music",
         price: 30000,
@@ -100,24 +174,49 @@ const products = [
         icon: "🍎"
     },
     {
-        id: 13,
+        id: 22,
+        name: "Apple Music 3 Bulan",
+        category: "music",
+        price: 85000,
+        description: "Apple Music Individual 3 bulan",
+        icon: "🍎"
+    },
+    {
+        id: 23,
         name: "Joox VIP 1 Bulan",
         category: "music",
         price: 20000,
         description: "Joox VIP Premium 1 bulan",
         icon: "🎤"
     },
-    // Software
     {
-        id: 14,
+        id: 24,
+        name: "YouTube Music Premium",
+        category: "music",
+        price: 28000,
+        description: "YouTube Music Premium 1 bulan - Tanpa Iklan",
+        icon: "🎧"
+    },
+    {
+        id: 25,
+        name: "Langit Musik Pro",
+        category: "music",
+        price: 25000,
+        description: "Langit Musik Pro 1 bulan - Musik Lokal",
+        icon: "🎼"
+    },
+
+    // ===== SOFTWARE (7 Products) =====
+    {
+        id: 26,
         name: "Microsoft 365 Personal",
         category: "software",
         price: 85000,
-        description: "Microsoft 365 Personal 1 bulan",
+        description: "Microsoft 365 Personal 1 bulan - Office Apps",
         icon: "💼"
     },
     {
-        id: 15,
+        id: 27,
         name: "Canva Pro 1 Bulan",
         category: "software",
         price: 70000,
@@ -125,7 +224,7 @@ const products = [
         icon: "🎨"
     },
     {
-        id: 16,
+        id: 28,
         name: "Adobe Creative Cloud",
         category: "software",
         price: 150000,
@@ -133,12 +232,36 @@ const products = [
         icon: "🖌️"
     },
     {
-        id: 17,
+        id: 29,
         name: "Grammarly Premium",
         category: "software",
         price: 65000,
         description: "Grammarly Premium 1 bulan",
         icon: "✍️"
+    },
+    {
+        id: 30,
+        name: "Zoom Pro 1 Bulan",
+        category: "software",
+        price: 120000,
+        description: "Zoom Pro Meeting tanpa batas waktu",
+        icon: "🎥"
+    },
+    {
+        id: 31,
+        name: "ChatGPT Plus",
+        category: "software",
+        price: 250000,
+        description: "ChatGPT Plus 1 bulan - GPT-4 Access",
+        icon: "🤖"
+    },
+    {
+        id: 32,
+        name: "Notion Premium",
+        category: "software",
+        price: 95000,
+        description: "Notion Personal Pro 1 bulan",
+        icon: "📝"
     }
 ];
 
