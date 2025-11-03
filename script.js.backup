@@ -1,86 +1,268 @@
 // Products Database
-// Products Database with Subcategories
 const products = [
-    // ===== GAMING - Mobile Legends (5 products) =====
-    { id: 1, name: "86 Diamond", category: "gaming", subcategory: "Mobile Legends", price: 20000, description: "Top up 86 diamond", icon: "🎮" },
-    { id: 2, name: "172 Diamond", category: "gaming", subcategory: "Mobile Legends", price: 38000, description: "Top up 172 diamond", icon: "🎮" },
-    { id: 3, name: "344 Diamond", category: "gaming", subcategory: "Mobile Legends", price: 75000, description: "Top up 344 diamond", icon: "🎮" },
-    { id: 4, name: "720 Diamond", category: "gaming", subcategory: "Mobile Legends", price: 155000, description: "Top up 720 diamond", icon: "🎮" },
-    { id: 5, name: "1440 Diamond", category: "gaming", subcategory: "Mobile Legends", price: 305000, description: "Top up 1440 diamond", icon: "🎮" },
+    // ===== GAMING (10 Products) =====
+    {
+        id: 1,
+        name: "Mobile Legends 86 Diamond",
+        category: "gaming",
+        price: 20000,
+        description: "Top up 86 diamond untuk Mobile Legends",
+        icon: "🎮"
+    },
+    {
+        id: 2,
+        name: "Mobile Legends 172 Diamond",
+        category: "gaming",
+        price: 38000,
+        description: "Top up 172 diamond untuk Mobile Legends",
+        icon: "🎮"
+    },
+    {
+        id: 3,
+        name: "Free Fire 100 Diamond",
+        category: "gaming",
+        price: 15000,
+        description: "Top up 100 diamond untuk Free Fire",
+        icon: "🔥"
+    },
+    {
+        id: 4,
+        name: "Free Fire 310 Diamond",
+        category: "gaming",
+        price: 45000,
+        description: "Top up 310 diamond untuk Free Fire",
+        icon: "🔥"
+    },
+    {
+        id: 5,
+        name: "PUBG Mobile 325 UC",
+        category: "gaming",
+        price: 50000,
+        description: "Top up 325 UC untuk PUBG Mobile",
+        icon: "🎯"
+    },
+    {
+        id: 6,
+        name: "Genshin Impact Blessing",
+        category: "gaming",
+        price: 65000,
+        description: "Blessing of the Welkin Moon - 30 hari",
+        icon: "⚔️"
+    },
+    {
+        id: 7,
+        name: "Steam Wallet 60K",
+        category: "gaming",
+        price: 60000,
+        description: "Voucher Steam Wallet IDR 60.000",
+        icon: "💨"
+    },
+    {
+        id: 8,
+        name: "Valorant 1000 VP",
+        category: "gaming",
+        price: 95000,
+        description: "Valorant Points 1000 VP untuk skin & battle pass",
+        icon: "🎯"
+    },
+    {
+        id: 9,
+        name: "Roblox 800 Robux",
+        category: "gaming",
+        price: 85000,
+        description: "Top up 800 Robux untuk Roblox",
+        icon: "🎲"
+    },
+    {
+        id: 10,
+        name: "Garena Shells 1000",
+        category: "gaming",
+        price: 125000,
+        description: "Garena Shells untuk berbagai game Garena",
+        icon: "🐚"
+    },
 
-    // ===== GAMING - Free Fire (5 products) =====
-    { id: 6, name: "100 Diamond", category: "gaming", subcategory: "Free Fire", price: 15000, description: "Top up 100 diamond", icon: "🔥" },
-    { id: 7, name: "310 Diamond", category: "gaming", subcategory: "Free Fire", price: 45000, description: "Top up 310 diamond", icon: "🔥" },
-    { id: 8, name: "520 Diamond", category: "gaming", subcategory: "Free Fire", price: 72000, description: "Top up 520 diamond", icon: "🔥" },
-    { id: 9, name: "1060 Diamond", category: "gaming", subcategory: "Free Fire", price: 145000, description: "Top up 1060 diamond", icon: "🔥" },
-    { id: 10, name: "2180 Diamond", category: "gaming", subcategory: "Free Fire", price: 290000, description: "Top up 2180 diamond", icon: "🔥" },
+    // ===== STREAMING (8 Products) =====
+    {
+        id: 11,
+        name: "Netflix Premium 1 Bulan",
+        category: "streaming",
+        price: 54000,
+        description: "Akses Netflix Premium 1 bulan - 4K UHD",
+        icon: "🎬"
+    },
+    {
+        id: 12,
+        name: "Netflix Premium 3 Bulan",
+        category: "streaming",
+        price: 155000,
+        description: "Akses Netflix Premium 3 bulan - 4K UHD",
+        icon: "🎬"
+    },
+    {
+        id: 13,
+        name: "Disney+ Hotstar 1 Bulan",
+        category: "streaming",
+        price: 39000,
+        description: "Akses Disney+ Hotstar Premium 1 bulan",
+        icon: "🏰"
+    },
+    {
+        id: 14,
+        name: "YouTube Premium 1 Bulan",
+        category: "streaming",
+        price: 35000,
+        description: "YouTube Premium tanpa iklan + YouTube Music",
+        icon: "📺"
+    },
+    {
+        id: 15,
+        name: "Vidio Premier League",
+        category: "streaming",
+        price: 45000,
+        description: "Nonton Premier League 1 bulan",
+        icon: "⚽"
+    },
+    {
+        id: 16,
+        name: "WeTV VIP 1 Bulan",
+        category: "streaming",
+        price: 35000,
+        description: "WeTV VIP untuk drama Asia premium",
+        icon: "📱"
+    },
+    {
+        id: 17,
+        name: "Amazon Prime Video",
+        category: "streaming",
+        price: 59000,
+        description: "Amazon Prime Video 1 bulan",
+        icon: "📦"
+    },
+    {
+        id: 18,
+        name: "HBO GO Premium",
+        category: "streaming",
+        price: 79000,
+        description: "HBO GO Premium 1 bulan - Original Series",
+        icon: "🎭"
+    },
 
-    // ===== GAMING - PUBG Mobile (5 products) =====
-    { id: 11, name: "60 UC", category: "gaming", subcategory: "PUBG Mobile", price: 15000, description: "Top up 60 UC", icon: "🎯" },
-    { id: 12, name: "325 UC", category: "gaming", subcategory: "PUBG Mobile", price: 50000, description: "Top up 325 UC", icon: "🎯" },
-    { id: 13, name: "660 UC", category: "gaming", subcategory: "PUBG Mobile", price: 95000, description: "Top up 660 UC", icon: "🎯" },
-    { id: 14, name: "1800 UC", category: "gaming", subcategory: "PUBG Mobile", price: 250000, description: "Top up 1800 UC", icon: "🎯" },
-    { id: 15, name: "3850 UC", category: "gaming", subcategory: "PUBG Mobile", price: 500000, description: "Top up 3850 UC", icon: "🎯" },
+    // ===== MUSIC (7 Products) =====
+    {
+        id: 19,
+        name: "Spotify Premium 1 Bulan",
+        category: "music",
+        price: 27000,
+        description: "Spotify Premium Individual 1 bulan",
+        icon: "🎵"
+    },
+    {
+        id: 20,
+        name: "Spotify Premium 3 Bulan",
+        category: "music",
+        price: 75000,
+        description: "Spotify Premium Individual 3 bulan",
+        icon: "🎶"
+    },
+    {
+        id: 21,
+        name: "Apple Music 1 Bulan",
+        category: "music",
+        price: 30000,
+        description: "Apple Music Individual 1 bulan",
+        icon: "🍎"
+    },
+    {
+        id: 22,
+        name: "Apple Music 3 Bulan",
+        category: "music",
+        price: 85000,
+        description: "Apple Music Individual 3 bulan",
+        icon: "🍎"
+    },
+    {
+        id: 23,
+        name: "Joox VIP 1 Bulan",
+        category: "music",
+        price: 20000,
+        description: "Joox VIP Premium 1 bulan",
+        icon: "🎤"
+    },
+    {
+        id: 24,
+        name: "YouTube Music Premium",
+        category: "music",
+        price: 28000,
+        description: "YouTube Music Premium 1 bulan - Tanpa Iklan",
+        icon: "🎧"
+    },
+    {
+        id: 25,
+        name: "Langit Musik Pro",
+        category: "music",
+        price: 25000,
+        description: "Langit Musik Pro 1 bulan - Musik Lokal",
+        icon: "🎼"
+    },
 
-    // ===== GAMING - Roblox (5 products) =====
-    { id: 16, name: "400 Robux", category: "gaming", subcategory: "Roblox", price: 45000, description: "Top up 400 Robux", icon: "🎲" },
-    { id: 17, name: "800 Robux", category: "gaming", subcategory: "Roblox", price: 85000, description: "Top up 800 Robux", icon: "🎲" },
-    { id: 18, name: "1700 Robux", category: "gaming", subcategory: "Roblox", price: 175000, description: "Top up 1700 Robux", icon: "🎲" },
-    { id: 19, name: "4500 Robux", category: "gaming", subcategory: "Roblox", price: 450000, description: "Top up 4500 Robux", icon: "🎲" },
-    { id: 20, name: "10000 Robux", category: "gaming", subcategory: "Roblox", price: 950000, description: "Top up 10000 Robux", icon: "🎲" },
-
-    // ===== GAMING - Genshin Impact (4 products) =====
-    { id: 21, name: "Welkin Moon", category: "gaming", subcategory: "Genshin Impact", price: 65000, description: "Blessing 30 hari", icon: "⚔️" },
-    { id: 22, name: "330 Crystal", category: "gaming", subcategory: "Genshin Impact", price: 75000, description: "Genesis Crystal 330", icon: "⚔️" },
-    { id: 23, name: "980 Crystal", category: "gaming", subcategory: "Genshin Impact", price: 195000, description: "Genesis Crystal 980", icon: "⚔️" },
-    { id: 24, name: "1980 Crystal", category: "gaming", subcategory: "Genshin Impact", price: 385000, description: "Genesis Crystal 1980", icon: "⚔️" },
-
-    // ===== GAMING - Valorant (4 products) =====
-    { id: 25, name: "475 VP", category: "gaming", subcategory: "Valorant", price: 50000, description: "Valorant Points 475", icon: "🎯" },
-    { id: 26, name: "1000 VP", category: "gaming", subcategory: "Valorant", price: 95000, description: "Valorant Points 1000", icon: "🎯" },
-    { id: 27, name: "2050 VP", category: "gaming", subcategory: "Valorant", price: 190000, description: "Valorant Points 2050", icon: "🎯" },
-    { id: 28, name: "3650 VP", category: "gaming", subcategory: "Valorant", price: 330000, description: "Valorant Points 3650", icon: "🎯" },
-
-    // ===== STREAMING - Netflix (3 products) =====
-    { id: 29, name: "Premium 1 Bulan", category: "streaming", subcategory: "Netflix", price: 54000, description: "4K UHD", icon: "🎬" },
-    { id: 30, name: "Premium 3 Bulan", category: "streaming", subcategory: "Netflix", price: 155000, description: "4K UHD", icon: "🎬" },
-    { id: 31, name: "Premium 6 Bulan", category: "streaming", subcategory: "Netflix", price: 299000, description: "4K UHD", icon: "🎬" },
-
-    // ===== STREAMING - Disney+ (3 products) =====
-    { id: 32, name: "Hotstar 1 Bulan", category: "streaming", subcategory: "Disney+", price: 39000, description: "Premium", icon: "🏰" },
-    { id: 33, name: "Hotstar 3 Bulan", category: "streaming", subcategory: "Disney+", price: 109000, description: "Premium", icon: "🏰" },
-    { id: 34, name: "Hotstar 12 Bulan", category: "streaming", subcategory: "Disney+", price: 399000, description: "Premium", icon: "🏰" },
-
-    // ===== STREAMING - YouTube (3 products) =====
-    { id: 35, name: "Premium 1 Bulan", category: "streaming", subcategory: "YouTube", price: 35000, description: "Tanpa iklan", icon: "📺" },
-    { id: 36, name: "Premium 3 Bulan", category: "streaming", subcategory: "YouTube", price: 99000, description: "Tanpa iklan", icon: "📺" },
-    { id: 37, name: "Family 1 Bulan", category: "streaming", subcategory: "YouTube", price: 75000, description: "6 akun", icon: "📺" },
-
-    // ===== MUSIC - Spotify (4 products) =====
-    { id: 38, name: "Premium 1 Bulan", category: "music", subcategory: "Spotify", price: 27000, description: "Individual", icon: "🎵" },
-    { id: 39, name: "Premium 3 Bulan", category: "music", subcategory: "Spotify", price: 75000, description: "Individual", icon: "🎵" },
-    { id: 40, name: "Premium 6 Bulan", category: "music", subcategory: "Spotify", price: 145000, description: "Individual", icon: "🎵" },
-    { id: 41, name: "Family 1 Bulan", category: "music", subcategory: "Spotify", price: 85000, description: "6 akun", icon: "🎵" },
-
-    // ===== MUSIC - Apple Music (3 products) =====
-    { id: 42, name: "Individual 1 Bulan", category: "music", subcategory: "Apple Music", price: 30000, description: "1 akun", icon: "🍎" },
-    { id: 43, name: "Individual 3 Bulan", category: "music", subcategory: "Apple Music", price: 85000, description: "1 akun", icon: "🍎" },
-    { id: 44, name: "Family 1 Bulan", category: "music", subcategory: "Apple Music", price: 55000, description: "6 akun", icon: "🍎" },
-
-    // ===== SOFTWARE - Microsoft 365 (3 products) =====
-    { id: 45, name: "Personal 1 Bulan", category: "software", subcategory: "Microsoft 365", price: 85000, description: "1 pengguna", icon: "💼" },
-    { id: 46, name: "Personal 1 Tahun", category: "software", subcategory: "Microsoft 365", price: 899000, description: "1 pengguna", icon: "💼" },
-    { id: 47, name: "Family 1 Tahun", category: "software", subcategory: "Microsoft 365", price: 1299000, description: "6 pengguna", icon: "💼" },
-
-    // ===== SOFTWARE - Adobe (3 products) =====
-    { id: 48, name: "All Apps 1 Bulan", category: "software", subcategory: "Adobe", price: 150000, description: "Semua aplikasi", icon: "🖌️" },
-    { id: 49, name: "Photography", category: "software", subcategory: "Adobe", price: 95000, description: "PS + LR", icon: "🖌️" },
-    { id: 50, name: "Single App", category: "software", subcategory: "Adobe", price: 120000, description: "1 aplikasi", icon: "🖌️" },
-
-    // ===== SOFTWARE - Canva (3 products) =====
-    { id: 51, name: "Pro 1 Bulan", category: "software", subcategory: "Canva", price: 70000, description: "1 pengguna", icon: "🎨" },
-    { id: 52, name: "Pro 6 Bulan", category: "software", subcategory: "Canva", price: 370000, description: "1 pengguna", icon: "🎨" },
-    { id: 53, name: "Pro 1 Tahun", category: "software", subcategory: "Canva", price: 699000, description: "1 pengguna", icon: "🎨" }
+    // ===== SOFTWARE (7 Products) =====
+    {
+        id: 26,
+        name: "Microsoft 365 Personal",
+        category: "software",
+        price: 85000,
+        description: "Microsoft 365 Personal 1 bulan - Office Apps",
+        icon: "💼"
+    },
+    {
+        id: 27,
+        name: "Canva Pro 1 Bulan",
+        category: "software",
+        price: 70000,
+        description: "Canva Pro dengan semua fitur premium",
+        icon: "🎨"
+    },
+    {
+        id: 28,
+        name: "Adobe Creative Cloud",
+        category: "software",
+        price: 150000,
+        description: "Adobe CC All Apps 1 bulan",
+        icon: "🖌️"
+    },
+    {
+        id: 29,
+        name: "Grammarly Premium",
+        category: "software",
+        price: 65000,
+        description: "Grammarly Premium 1 bulan",
+        icon: "✍️"
+    },
+    {
+        id: 30,
+        name: "Zoom Pro 1 Bulan",
+        category: "software",
+        price: 120000,
+        description: "Zoom Pro Meeting tanpa batas waktu",
+        icon: "🎥"
+    },
+    {
+        id: 31,
+        name: "ChatGPT Plus",
+        category: "software",
+        price: 250000,
+        description: "ChatGPT Plus 1 bulan - GPT-4 Access",
+        icon: "🤖"
+    },
+    {
+        id: 32,
+        name: "Notion Premium",
+        category: "software",
+        price: 95000,
+        description: "Notion Personal Pro 1 bulan",
+        icon: "📝"
+    }
 ];
 
 // Cart
@@ -99,32 +281,20 @@ document.addEventListener('DOMContentLoaded', function() {
     updateProductCount();
 });
 
-// Current filters
-let currentFilter = { category: 'all', subcategory: null, search: '' };
-
 // Load Products
-function loadProducts(filter = 'all', subcategory = null, searchQuery = '') {
+function loadProducts(filter = 'all', searchQuery = '') {
     const productGrid = document.getElementById('productGrid');
     productGrid.innerHTML = '';
-
-    // Update current filter
-    currentFilter = { category: filter, subcategory: subcategory, search: searchQuery };
 
     let filteredProducts = filter === 'all'
         ? products
         : products.filter(p => p.category === filter);
 
-    // Apply subcategory filter
-    if (subcategory) {
-        filteredProducts = filteredProducts.filter(p => p.subcategory === subcategory);
-    }
-
     // Apply search filter if query exists
     if (searchQuery) {
         filteredProducts = filteredProducts.filter(p =>
             p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (p.subcategory && p.subcategory.toLowerCase().includes(searchQuery.toLowerCase()))
+            p.description.toLowerCase().includes(searchQuery.toLowerCase())
         );
     }
 
@@ -134,52 +304,6 @@ function loadProducts(filter = 'all', subcategory = null, searchQuery = '') {
     });
 
     updateProductCount(filteredProducts.length);
-
-    // Update subcategory navigation
-    updateSubcategoryNav(filter);
-}
-
-// Get Subcategories for a Category
-function getSubcategories(category) {
-    if (category === 'all') return [];
-    const subcategories = [...new Set(products.filter(p => p.category === category).map(p => p.subcategory))];
-    return subcategories;
-}
-
-// Update Subcategory Navigation
-function updateSubcategoryNav(category) {
-    const subcatContainer = document.getElementById('subcategoryNav');
-    if (!subcatContainer) return;
-
-    if (category === 'all') {
-        subcatContainer.style.display = 'none';
-        return;
-    }
-
-    const subcategories = getSubcategories(category);
-    if (subcategories.length === 0) {
-        subcatContainer.style.display = 'none';
-        return;
-    }
-
-    subcatContainer.style.display = 'block';
-    subcatContainer.innerHTML = `
-        <div class="subcategory-pills">
-            <button class="subcat-pill active" onclick="filterBySubcategory(null)">Semua</button>
-            ${subcategories.map(sub =>
-                `<button class="subcat-pill" onclick="filterBySubcategory('${sub}')">${sub}</button>`
-            ).join('')}
-        </div>
-    `;
-}
-
-// Filter by Subcategory
-function filterBySubcategory(subcategory) {
-    const pills = document.querySelectorAll('.subcat-pill');
-    pills.forEach(pill => pill.classList.remove('active'));
-    event.target.classList.add('active');
-
-    loadProducts(currentFilter.category, subcategory, currentFilter.search);
 }
 
 // Create Product Card
@@ -187,14 +311,13 @@ function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card';
     card.dataset.category = product.category;
-    card.dataset.subcategory = product.subcategory || '';
 
     card.innerHTML = `
         <div class="product-image">
             ${product.icon}
         </div>
         <div class="product-info">
-            <span class="product-subcategory">${product.subcategory || getCategoryName(product.category)}</span>
+            <span class="product-category">${getCategoryName(product.category)}</span>
             <h3 class="product-name">${product.name}</h3>
             <p class="product-description">${product.description}</p>
             <div class="product-footer">
