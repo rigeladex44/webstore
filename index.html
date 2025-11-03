@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoucherKu - Jual Voucher Digital & Akun Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span>VoucherKu</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#howto">Cara Belanja</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Voucher Digital & Akun Premium</h1>
+                <p>Beli voucher game, streaming, dan akun premium dengan mudah dan aman</p>
+                <a href="#products" class="btn btn-primary">Belanja Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Kategori Produk</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="gaming">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Gaming</h3>
+                </div>
+                <div class="category-card" data-category="streaming">
+                    <i class="fas fa-tv"></i>
+                    <h3>Streaming</h3>
+                </div>
+                <div class="category-card" data-category="music">
+                    <i class="fas fa-music"></i>
+                    <h3>Musik</h3>
+                </div>
+                <div class="category-card" data-category="software">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Software</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Produk Kami</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="gaming">Gaming</button>
+                <button class="filter-btn" data-filter="streaming">Streaming</button>
+                <button class="filter-btn" data-filter="music">Musik</button>
+                <button class="filter-btn" data-filter="software">Software</button>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How To -->
+    <section id="howto" class="howto">
+        <div class="container">
+            <h2 class="section-title">Cara Belanja</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-search"></i>
+                    <h3>Pilih Produk</h3>
+                    <p>Cari dan pilih voucher atau akun premium yang Anda inginkan</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Tambah ke Keranjang</h3>
+                    <p>Klik tombol beli dan produk akan masuk ke keranjang</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Lakukan Pembayaran</h3>
+                    <p>Pilih metode pembayaran dan selesaikan transaksi</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-envelope"></i>
+                    <h3>Terima Kode</h3>
+                    <p>Kode voucher atau detail akun dikirim ke email Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>support@voucherku.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <p>+62 812-3456-7890</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Senin - Minggu (08:00 - 22:00)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VoucherKu. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> Keranjang Belanja</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <h3>Total: <span id="totalPrice">Rp 0</span></h3>
+            </div>
+            <button id="checkoutBtn" class="btn btn-primary btn-block">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-credit-card"></i> Checkout</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="customerName">Nama Lengkap</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerEmail">Email</label>
+                    <input type="email" id="customerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">No. WhatsApp</label>
+                    <input type="tel" id="customerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Metode Pembayaran</label>
+                    <select id="paymentMethod" required>
+                        <option value="">Pilih Metode Pembayaran</option>
+                        <option value="gopay">GoPay</option>
+                        <option value="ovo">OVO</option>
+                        <option value="dana">DANA</option>
+                        <option value="shopeepay">ShopeePay</option>
+                        <option value="bca">Transfer BCA</option>
+                        <option value="mandiri">Transfer Mandiri</option>
+                        <option value="bri">Transfer BRI</option>
+                        <option value="bni">Transfer BNI</option>
+                    </select>
+                </div>
+                <div class="order-summary">
+                    <h3>Ringkasan Pesanan</h3>
+                    <div id="checkoutItems"></div>
+                    <div class="summary-total">
+                        <strong>Total Pembayaran: <span id="checkoutTotal">Rp 0</span></strong>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Proses Pembayaran</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Pembayaran Berhasil!</h2>
+            <p>Terima kasih atas pembelian Anda</p>
+            <div class="order-details" id="orderDetails"></div>
+            <p class="success-note">Kode voucher dan detail akun telah dikirim ke email Anda</p>
+            <button class="btn btn-primary" onclick="closeSuccessModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
